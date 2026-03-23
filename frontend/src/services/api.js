@@ -22,11 +22,11 @@ export async function fetchSummoner(summonerName, tag) {
   return request(`/api/v1/summoner/${encodeURIComponent(summonerName)}/${encodeURIComponent(tag)}`)
 }
 
-export async function fetchMatchHistory(puuid, count = 5) {
+export async function fetchMatchHistory(puuid, count = 20) {
   return request(`/api/v1/match-history/${encodeURIComponent(puuid)}?start=0&count=${count}`)
 }
 
-export async function fetchMatchCards(puuid, count = 5, forceRefresh = false) {
+export async function fetchMatchCards(puuid, count = 20, forceRefresh = false) {
   return request(
     `/api/v1/match-cards/${encodeURIComponent(puuid)}?count=${count}&force_refresh=${forceRefresh}`,
   )

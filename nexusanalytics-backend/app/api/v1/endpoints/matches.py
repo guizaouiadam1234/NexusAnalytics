@@ -170,7 +170,7 @@ async def get_match_details(match_id: str, force_refresh: bool = False) -> dict[
 @router.get("/match-cards/{puuid}")
 async def get_match_cards(
     puuid: str,
-    count: int = 5,
+    count: int = 20,
     force_refresh: bool = False,
 ) -> dict[str, Any]:
     if count < 1 or count > 20:
